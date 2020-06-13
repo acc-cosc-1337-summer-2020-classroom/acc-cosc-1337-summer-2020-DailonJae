@@ -3,11 +3,12 @@
 #include <iostream>
 #include <iomanip>
 //write namespace using statement for cout
-std::cout;
-std::cin;
-std::setprecision;
-std::fixed;
-std::setw;
+using std::cout;
+using std::cin;
+using std::setprecision;
+using std::fixed;
+using std::setw;
+using std::endl;
 /*
 Call multiply_numbers with 10 and 10 parameter values and display function result
 */
@@ -19,7 +20,7 @@ int main()
 	cin>> tip_rate;
 	tip_amount = get_tip_amount(meal_amount, tip_rate);
 	total = tip_amount + tax_amount + meal_amount;
-	cout<< setw(12)<< "meal amount:" <<fixed<<setprecision(2)<<meal_amount<<endl;
+	cout<<setw(12)<< "meal amount:" <<fixed<<setprecision(2)<<meal_amount<<endl;
 	cout<<setw(12)<<"sales tax:"<<tax_amount<<endl;
 	cout<<setw(12)<<"tip amount:"<<tip_amount<<endl;
 	cout<<setw(12)<<"total:"<<total<<endl;
