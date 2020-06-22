@@ -32,6 +32,7 @@ int main()
 	char choice;
 
 	//loop for user to enter letter grade , credit hours then choose to continue or not do
+	do
 	{
 	cout << "Enter letter grade: ";
 	cin >> letter_grade;
@@ -40,23 +41,10 @@ int main()
 	sum_credit_points += get_grade_points(letter_grade) * credit_hours;
 	sum_credit_hours += credit_hours;
 
-	cout<<"\n";
+	cout<<"Enter y to continue.";
+	cin>>choice;
 	}
 	while(choice== 'y' || choice=='Y');
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
-
-	cout << "Enter letter grade: ";
-	cin >> letter_grade;
-	cout << "Enter credit hours: ";
-	cin >> credit_hours;
-	sum_credit_points += get_grade_points(letter_grade)  * credit_hours;
-	sum_credit_hours += credit_hours;
 
 	// calculation and display of GPA after the entry of grades and credit hours has finished
 	double gpa = calculate_gpa(sum_credit_hours, sum_credit_points);
