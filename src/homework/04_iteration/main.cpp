@@ -1,7 +1,7 @@
 //write include statements
-
+#include "dna.h"
+#include <iostream>
 //write using statements
-
 
 /*
 Write code that prompts user to enter 1 for Get GC Content, 
@@ -12,5 +12,33 @@ user enters a y or Y.
 */
 int main() 
 {
+	int choice;
+	string dna;
+	char again;
+	do
+	{
+		cout<<"Enter 1 for Get GC content, or 2 for Get DNA Complecent: or enter 2 for Get DNA Complecent:\n";
+		cin>> choice;
+		cout<<"Please enter the DNA string: ";
+		cin>>dna;
+		if (choice == 1) 
+		{
+			get_gc_content(dna);
+			cout<<dna;
+		}
+		else if(choice==2) 
+		{
+			get_dna_complement(dna);
+			cout<<dna;
+		}
+		else{
+			cout<<"That is an invalid choice.";
+			return 0;
+		}
+		cout<<"Press 'y' or 'Y' to quit";
+		cin>> again;
+	} while (again == 'Y' || again == 'y');
+	
+	
 	return 0;
 }
