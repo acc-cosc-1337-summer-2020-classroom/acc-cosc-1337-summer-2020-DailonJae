@@ -17,10 +17,12 @@ double get_gc_content(const std::string&dna)
            gc++;
        }
    }
+
+   double gc_content=(gc/dna.length());
+   return gc_content;
+
 }
 
-double gc_content=(gc/dna.length());
-return gc_content
 
 /*
 Write code for function get_reverse_string that
@@ -29,8 +31,9 @@ accepts a string parameter and returns a string reversed.
 string get_reverse_string(std::string dna)
 {
     std::string rev;
-    for(int i dna.size()-1; >=0; i--)
-    {rev = rev.append(1,s[1]);
+    for(int i=dna.size(); i > 0; i--)
+    {
+         rev.push_back(dna[i-1]);
     }
     return rev;
 }
@@ -48,19 +51,19 @@ c. return string
 */
 std::string get_dna_complement(std::string dna)
 {
-    std::string dna_reverse_complement = get_reverse_string(dna);
+    std::string str = get_reverse_string(dna);
 
     for(int i = 0; i < dna.length(); i++)
     {
-        if(dna[i] == 'A')
+        if(str[i] == 'A')
         {
             str[i] = 'T';
         }
-        else if(dna[i] == 'T')
+        else if(str[i] == 'T')
         {
             str[i] = 'A';
         }
-        else if(dna[i] == 'G')
+        else if(str[i] == 'G')
         {
             str[i] = 'C';
         }
