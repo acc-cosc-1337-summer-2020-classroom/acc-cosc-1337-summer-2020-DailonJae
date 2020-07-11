@@ -23,19 +23,19 @@ int main()
 		cin>>dna;
 		if (choice == 1) 
 		{
-			get_gc_content(dna);
-			cout<<dna;
+			cout<<get_gc_content(dna);
+			
 		}
 		else if(choice==2) 
 		{
-			get_dna_complement(dna);
-			cout<<dna;
+			cout<<get_dna_complement(dna);
+			
 		}
 		else{
 			cout<<"That is an invalid choice.";
 			return 0;
 		}
-		cout<<"Press 'y' or 'Y' to quit";
+		cout<<"Press 'y' or 'Y' to continue";
 		cin>> again;
 	} while (again == 'Y' || again == 'y');
 	
